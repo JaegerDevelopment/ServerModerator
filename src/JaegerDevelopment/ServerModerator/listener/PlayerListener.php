@@ -23,11 +23,7 @@ class PlayerListener extends ListenerBase implements Listener{
             $reason = $entry->getReason();
             $staffer = $entry->getSource();
             $expire = TempbanCommand::expirationTimerToString($entry->getExpires(), new DateTime());
-            if($reason !== ""){
-                $player->kick($this->getPlugin()->getConfig()->get("prefix")  . " " . str_replace(["{target}", "{reason}", "{time}", "{staffer}"], [$player->getName(), $reason, $expire, $staffer], $this->getPlugin()->getConfig()->get("tempban-message-with-reason")), false);
-            } else{
-                $player->kick($this->getPlugin()->getConfig()->get("prefix") . str_replace(["{target}", "{time}", "{staffer}"], [$player->getName(), $expire, $staffer], $this->getPlugin()->getConfig()->get("tempban-message-without-reason")), false);
-            }
+            $player->kick($this->getPlugin()->getConfig()->get("prefix") . str_replace(["{target}", "{reason}", "{time}", "{staffer}"], [$player->getName(), (trim($reason) !== "" ? " Reason: " . TextFormat::RESET . $reason : ""), $expire, $staffer], $this->getPlugin()->getConfig()->get("tempban-message")), false);
             foreach($this->getPlugin()->getServer()->getOnlinePlayers() as $staffer){
                 if($staffer->hasPermission("servermoderator.tempban")){
                     $staffer->sendMessage($this->getPlugin()->getConfig()->get("prefix") . "Staffer: " . $staffer->getName() . " banned " . $player->getName() . " until at " . $expire . (trim($reason) !== "" ? " Reason: " . TextFormat::RESET . $reason : ""));
