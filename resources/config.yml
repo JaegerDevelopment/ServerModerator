@@ -132,7 +132,7 @@ ss-broadcastmessage-mode: off
 ss-start-title: off
 ss-start-popup: on
 ss-start-message: "§cYou are under SS"
-ss-creator-title: "by {staffer}"
+ss-creator-title: "§cby {staffer}"
 ss-requests-message: off
 ss-requests-message-on: "you are under ss execute these requests and the staff that is making you ss will check if these requests: send screenshots of the screen in front of the staff that is making you ss, send open screen apps, send screens of your textures and textures activated, send all these screens to the staff on Telegram who are checking you"
 ss-start-message-staffer: "You are doing ss with {target}"
