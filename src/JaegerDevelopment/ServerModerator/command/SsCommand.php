@@ -55,7 +55,9 @@ class SsCommand extends Command implements PluginIdentifiableCommand {
                             $sender->teleport(new Position($position["ss"]["staffer"]["x"], $position["ss"]["staffer"]["y"], $position["ss"]["staffer"]["z"], $this->getPlugin()->getServer()->getLevelByName($position["ss"]["staffer"]["world"])));
                             $target->teleport(new Position($position["ss"]["target"]["x"], $position["ss"]["target"]["y"], $position["ss"]["target"]["z"], $this->getPlugin()->getServer()->getLevelByName($position["ss"]["target"]["world"])));
                             $message = str_replace("{staffer}", $sender->getName(), $this->getPlugin()->getConfig()->get("ss-start-message"));
-                            $target->sendTitle($this->getPlugin()->getConfig()->get("prefix") . " " . $message, , 100);
+                            $message = $this->getPlugin()->getConfig()->get("ss-start-message");
+                            $staffer = str_replace("{staffer}", $sender->getName(), $this->getPlugin()->getConfig()->get("ss-creator-title"));
+                            $target->sendTitle( " " . $message, $staffer, 100);
                             $target->setImmobile(true);
                             $message = str_replace("{target}", $target->getName(), $this->getPlugin()->getConfig()->get("ss-start-message-staffer"));
                             $sender->sendMessage($this->getPlugin()->getConfig()->get("prefix") . " " . $message);
