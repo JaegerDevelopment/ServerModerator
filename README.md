@@ -15,3 +15,6 @@ Plugin Moderating for Your Server
   kick-ui-content: ""
   kick-broadcastmessage-mode: off
 ```
+# Social
+- [YouTube](https://www.youtube.com/channel/UCkTXxg_RVTRaiWWCZjZcVZA)
+- [Twitter](https://twitter.com/JaegerDevelopm1)
