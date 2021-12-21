@@ -9,7 +9,7 @@ Plugin Moderating for Your Server
 * Unban
 
 # Messages of configurable functions in config.yml
-```http
+```bash
   Example:
   kick-ui-title: "§7[§9Server§cModerator§7]§r"
   kick-ui-content: ""
