@@ -1,6 +1,6 @@
 name: ServerModerator
 main: JaegerDevelopment\ServerModerator\ServerModerator
-version: 1.0.0
+version: 1.0.1
 api: 3.22.x
 load: STARTUP
 authors:
