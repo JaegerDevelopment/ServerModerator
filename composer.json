@@ -1,0 +1,35 @@
+{
+  "require": {
+	"php": "^8.0",
+	"php-64bit": "*",
+	"jojoe77777/formapi": "^2.1.0",
+	"sof3/libasynql": "4.1.0"
+  },
+  "require-dev": {
+	"pocketmine/pocketmine-mp": "4.6.1"
+  },
+  "repositories": [
+	{
+	  "type": "package",
+	  "package": {
+		"name": "jojoe77777/formapi",
+		"version": "2.1.0",
+		"dist": {
+		  "url": "https://poggit.pmmp.io/r/150202/FormAPI_pr-27.phar",
+		  "type": "phar",
+		  "shasum": "f7d404e66cba65401860da78323a0a04399f3353"
+		},
+		"source": {
+		  "type": "git",
+		  "url": "https://github.com/jojoe77777/FormAPI",
+		  "reference": "f4866a7c5909433e6a91ce2b87bdd70abe099fc5"
+		},
+		"autoload": {
+		  "psr-0": {
+			"jojoe77777\\FormAPI\\": "src/"
+		  }
+		}
+	  }
+	}
+  ]
+}

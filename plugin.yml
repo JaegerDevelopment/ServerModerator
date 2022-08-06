@@ -1,8 +1,7 @@
 name: ServerModerator
 main: JaegerDevelopment\ServerModerator\ServerModerator
-version: 1.1.0
-api: 3.22.x
-load: STARTUP
+version: 1.2.0
+api: 4.0.0
 authors:
   - AtlanticDany
   - JaegerNess
